@@ -13,15 +13,15 @@ int check_type(char c, va_list args)
 
 	len = 0;
 	if (c == 'c')
-		len += _putchar(va_arg(args, int));
+		len += print_char(va_arg(args, int));
 	else if (c == 's')
 		len += _puts(va_arg(args, char *));
 	else if (c == '%')
-		len += _putchar('%');
+		len += print_char('%');
 	else
 	{
-		len += _putchar('%');
-		len += _putchar(c);
+		len += print_char('%');
+		len += print_char(c);
 	}
 	va_end(args);
 	return (len);

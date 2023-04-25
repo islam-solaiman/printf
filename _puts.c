@@ -12,6 +12,6 @@ int _puts(char *str)
 
 	i = 0;
 	while (str[i])
-		_putchar(str[i++]);
+		print_char(str[i++]);
 	return (i);
 }
