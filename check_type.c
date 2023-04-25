@@ -18,6 +18,11 @@ int check_type(char c, va_list args)
 		len += _puts(va_arg(args, char *));
 	else if (c == '%')
 		len += _putchar('%');
+	else
+	{
+		len += _putchar('%');
+		len += _putchar(c);
+	}
 	va_end(args);
 	return (len);
 }
