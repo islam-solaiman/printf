@@ -48,12 +48,19 @@ int _strlen(const char *s)
 int check_type(char c, va_list args)
 {
 	int	len;
+	char *str;
 
 	len = 0;
 	if (c == 'c')
 		len += _putchar(va_arg(args, int));
 	else if (c == 's')
-		len += _puts(va_arg(args, char *));
+	{
+		str = va_arg(args, char *);
+		if (str == NULL)
+			len += _puts("(null)");
+		else
+		len += _puts(str);
+	}
 	else if (c == '%')
 		len += _putchar('%');
 	else

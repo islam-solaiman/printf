@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i, count, len;
 	va_list args;
 
-	if (!format)
+	if (format == NULL)
 		return (-1);
 	count = _strlen(format);
 	va_start(args, format);
