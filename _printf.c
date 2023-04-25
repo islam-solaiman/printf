@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	int i, count, len;
 	va_list args;
 
+	if (!format)
+		return (-1);
 	count = _strlen(format);
 	va_start(args, format);
 
