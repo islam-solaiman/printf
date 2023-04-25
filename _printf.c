@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 	count = _strlen(format);
 	va_start(args, format);
 
+	if (count <= 0)
+		return (0);
 	i = 0;
 	len = 0;
 	while (format[i] && i < count)
