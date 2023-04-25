@@ -4,6 +4,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
+#include <stdio.h>
 
 int _putchar(char c);
 int _strlen(const char *s);
