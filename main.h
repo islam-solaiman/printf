@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 
-int print_char(char c);
+int _putchar(char c);
 int _strlen(const char *s);
 int _puts(char *str);
 int     print_percent(void);
